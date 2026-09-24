@@ -1,8 +1,626 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><title>Link test</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TRAVIS — Do You Actually Know Where Your Money Goes?</title>
+  <meta name="description" content="A quiet question for every Kenyan. If you don't know where your money went last month, TRAVIS was built for you. 100% offline. One-time purchase. KES 999." />
+  <meta name="author" content="Travis Guardian" />
+  <meta name="theme-color" content="#0B1F3A" />
+  <link rel="icon" href="assets/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/img/travis_192.png" />
+
+  <style>
+    :root {
+      --navy: #0B1F3A;
+      --navy-soft: #13294B;
+      --teal: #0FB5A6;
+      --green: #1FA971;
+      --gold: #F2B705;
+      --bg: #FFFFFF;
+      --bg-alt: #F6F8FB;
+      --text: #0F172A;
+      --text-muted: #5A6B85;
+      --border: #E4E9F0;
+      --radius: 14px;
+      --shadow-sm: 0 1px 2px rgba(15,23,42,.06);
+      --shadow-md: 0 8px 24px rgba(15,23,42,.08);
+      --shadow-lg: 0 20px 48px rgba(15,23,42,.14);
+      --max: 1180px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* ============ Header ============ */
+    header.landing-header {
+      padding: 22px 0;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+    .landing-header .container {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 800; letter-spacing: -.02em; font-size: 17px; color: var(--navy);
+    }
+    .brand-mark {
+      width: 30px; height: 30px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--teal), var(--green));
+      display: grid; place-items: center;
+      color: #fff; font-weight: 800; font-size: 14px;
+    }
+    .landing-header .nav-mini {
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+    .landing-header .nav-mini a {
+      color: var(--teal); font-weight: 600;
+    }
+    .landing-header .nav-mini a:hover { text-decoration: underline; }
+
+    /* ============ Hero (NEPQ opener) ============ */
+    .hero-landing {
+      padding: 96px 0 80px;
+      background:
+        radial-gradient(1000px 500px at 80% -10%, rgba(15,181,166,.10), transparent 60%),
+        linear-gradient(180deg, #FFFFFF 0%, #F6F8FB 100%);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .hero-landing .eyebrow {
+      display: inline-block;
+      font-size: 12.5px; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--teal);
+      background: rgba(15,181,166,.10);
+      border: 1px solid rgba(15,181,166,.25);
+      padding: 7px 14px; border-radius: 999px;
+      margin-bottom: 28px;
+    }
+    .hero-landing h1 {
+      font-size: clamp(32px, 5.4vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -.03em;
+      font-weight: 800;
+      color: var(--navy);
+      max-width: 900px;
+      margin: 0 auto 24px;
+    }
+    .hero-landing h1 .soft {
+      display: block;
+      font-weight: 500;
+      color: var(--text-muted);
+      font-size: clamp(20px, 2.6vw, 30px);
+      letter-spacing: -.01em;
+      margin-top: 18px;
+    }
+    .hero-landing p.lead {
+      font-size: clamp(16px, 1.6vw, 18px);
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto 40px;
+    }
+    .hero-ctas {
+      display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+    }
+
+    /* ============ Buttons ============ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 26px;
+      border-radius: 12px;
+      font-weight: 700; font-size: 15.5px;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      cursor: pointer; border: none;
+    }
+    .btn-primary {
+      background: var(--navy); color: #fff;
+      box-shadow: var(--shadow-md);
+    }
+    .btn-primary:hover { transform: translateY(-2px); background: var(--navy-soft); box-shadow: var(--shadow-lg); }
+    .btn-teal {
+      background: var(--teal); color: #fff;
+      box-shadow: 0 10px 28px rgba(15,181,166,.30);
+    }
+    .btn-teal:hover { transform: translateY(-2px); background: #0DA394; }
+    .btn-ghost {
+      background: #fff; color: var(--navy);
+      border: 1.5px solid var(--border);
+    }
+    .btn-ghost:hover { transform: translateY(-2px); border-color: var(--navy); }
+
+    /* ============ Sections ============ */
+    section { padding: 96px 0; }
+    section.alt { background: var(--bg-alt); }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 64px;
+    }
+    .section-head .kicker {
+      font-size: 12.5px; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 14px;
+    }
+    .section-head h2 {
+      font-size: clamp(26px, 3.6vw, 42px);
+      letter-spacing: -.02em; font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.12;
+    }
+    .section-head p {
+      color: var(--text-muted);
+      font-size: 17.5px;
+    }
+
+    /* ============ Rhetorical Questions ============ */
+    .questions {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .question {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px 32px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+      display: flex; gap: 20px; align-items: flex-start;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    .question:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(15,181,166,.4);
+    }
+    .question .q-mark {
+      width: 40px; height: 40px; flex-shrink: 0;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--teal), var(--green));
+      color: #fff; font-weight: 800; font-size: 20px;
+      display: grid; place-items: center;
+    }
+    .question .q-text {
+      flex: 1;
+    }
+    .question .q-text p {
+      color: var(--navy);
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .question .q-text .sub {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      font-weight: 400;
+      line-height: 1.55;
+    }
+
+    /* ============ Pain → Relief pivot ============ */
+    .pivot {
+      text-align: center;
+      max-width: 760px;
+      margin: 56px auto 0;
+      padding: 40px 32px;
+      background: linear-gradient(135deg, var(--navy) 0%, #13355F 100%);
+      border-radius: 22px;
+      box-shadow: var(--shadow-lg);
+    }
+    .pivot p {
+      color: rgba(255,255,255,.92);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.5;
+      letter-spacing: -.01em;
+      font-weight: 500;
+    }
+    .pivot .accent {
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    /* ============ Three-up value ============ */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
+
+    .value-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .value-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .value-card .icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      display: grid; place-items: center; font-size: 20px;
+      background: rgba(15,181,166,.10); color: var(--teal);
+      margin-bottom: 18px;
+    }
+    .value-card h3 {
+      font-size: 18px; color: var(--navy);
+      margin-bottom: 10px; letter-spacing: -.01em;
+    }
+    .value-card p { color: var(--text-muted); font-size: 15px; }
+
+    /* ============ FOMO / Loss framing ============ */
+    .loss-block {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .loss-row {
+      display: flex; gap: 20px; align-items: flex-start;
+      padding: 22px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .loss-row:last-child { border-bottom: none; }
+    .loss-row .mark {
+      width: 44px; height: 44px; flex-shrink: 0;
+      border-radius: 12px;
+      display: grid; place-items: center;
+      font-size: 20px;
+      background: rgba(194,65,12,.08);
+      color: #C2410C;
+    }
+    .loss-row .body h4 {
+      color: var(--navy); font-size: 17px;
+      font-weight: 700; margin-bottom: 6px;
+      letter-spacing: -.01em;
+    }
+    .loss-row .body p {
+      color: var(--text-muted); font-size: 15px; line-height: 1.6;
+    }
+    .loss-row .body .tag {
+      display: inline-block;
+      font-size: 11.5px; font-weight: 800;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: #C2410C;
+      background: rgba(194,65,12,.08);
+      padding: 4px 10px; border-radius: 6px;
+      margin-bottom: 8px;
+    }
+
+    /* ============ Final CTA ============ */
+    .final-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, #13355F 100%);
+      color: #fff;
+      border-radius: 26px;
+      padding: 72px 40px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .final-cta h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      letter-spacing: -.03em;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .final-cta .quote {
+      color: rgba(255,255,255,.78);
+      font-size: clamp(16px, 1.8vw, 18px);
+      max-width: 620px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .final-cta .btn-primary {
+      background: var(--teal); color: #fff;
+      box-shadow: 0 14px 36px rgba(15,181,166,.35);
+    }
+    .final-cta .btn-primary:hover { background: #0DA394; }
+    .final-cta .btn-ghost {
+      background: transparent; color: #fff;
+      border-color: rgba(255,255,255,.35);
+    }
+    .final-cta .btn-ghost:hover { background: rgba(255,255,255,.08); border-color: #fff; }
+
+    .final-cta .micro {
+      margin-top: 22px;
+      font-size: 13px;
+      color: rgba(255,255,255,.55);
+      letter-spacing: .04em;
+    }
+
+    /* ============ Footer ============ */
+    footer.landing-footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      background: #fff;
+      text-align: center;
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+    footer.landing-footer .foot-brand {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-weight: 800; color: var(--navy); font-size: 14.5px;
+      margin-bottom: 10px;
+    }
+    footer.landing-footer .foot-brand .brand-mark {
+      width: 22px; height: 22px; font-size: 11px;
+    }
+    footer.landing-footer .links {
+      margin-top: 12px;
+    }
+    footer.landing-footer .links a {
+      margin: 0 10px;
+      color: var(--text-muted);
+    }
+    footer.landing-footer .links a:hover { color: var(--teal); }
+
+    /* ============ Reveal ============ */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
 <body>
-  <a href="travis.html">E: same tab trial</a><br>
-  <a href="travis.html">E2: redirect page, same tab</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="landing-header">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">TG</span>
+        <span>Travis Guardian</span>
+      </a>
+      <div class="nav-mini">
+        Part of <a href="index.html">Travis Guardian</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO — NEPQ OPENER ============ -->
+  <section class="hero-landing">
+    <div class="container">
+      <div class="eyebrow">A quiet question for every Kenyan</div>
+      <h1>
+        When was the last time you spoke to an accountant?
+        <span class="soft">
+          Most people can't remember.
+          <br />That's not a problem — it's a gap.
+        </span>
+      </h1>
+      <p class="lead">
+        If you run a business, earn a salary, hustle on the side, or
+        manage a home — TRAVIS fills that gap. Quietly, offline,
+        every single day.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://travis-three.vercel.app/travis_core.html"
+           class="btn btn-teal">
+          Open TRAVIS →
+        </a>
+        <a href="#questions" class="btn btn-ghost">
+          First, one question
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RHETORICAL QUESTIONS ============ -->
+  <section id="questions" class="reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Be honest with yourself</div>
+        <h2>Four questions. No wrong answers.</h2>
+        <p>If any of these land too close to home — TRAVIS was built for you.</p>
+      </div>
+
+      <div class="questions">
+
+        <div class="question">
+          <div class="q-mark">1</div>
+          <div class="q-text">
+            <p>Do you know exactly where your money went last month?</p>
+            <span class="sub">
+              Not roughly. Not "mostly." <em>Exactly.</em> If you'd have to open M-Pesa,
+              scroll through SMS, and guess — that's the gap TRAVIS closes.
+            </span>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="q-mark">2</div>
+          <div class="q-text">
+            <p>Is your business actually making a profit — or just looking busy?</p>
+            <span class="sub">
+              Cash in the drawer is not profit. A busy shop is not a healthy one.
+              TRAVIS shows you the difference — automatically, without an accountant.
+            </span>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="q-mark">3</div>
+          <div class="q-text">
+            <p>If an emergency hit tomorrow, how many months could you survive?</p>
+            <span class="sub">
+              School fees. Medical. A broken phone. Most Kenyan households live
+              one shock away from debt. TRAVIS predicts those shocks
+              <em>weeks in advance</em> — so you're never caught off guard.
+            </span>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="q-mark">4</div>
+          <div class="q-text">
+            <p>Are you building wealth — or just surviving paycheck to paycheck?</p>
+            <span class="sub">
+              There's a quiet difference between earning money and growing it.
+              TRAVIS tells you which one you're actually doing. Every single day.
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pain → Relief pivot -->
+      <div class="pivot reveal">
+        <p>
+          If you hesitated even once, you're not alone —<br />
+          <span class="accent">you're exactly who TRAVIS was built for.</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ THREE-UP VALUE ============ -->
+  <section class="alt reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">What you get back</div>
+        <h2>Peace of mind isn't a luxury. It's a system.</h2>
+        <p>Three things every Kenyan deserves — and rarely has.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="value-card">
+          <div class="icon">🧘</div>
+          <h3>Peace of mind</h3>
+          <p>End every month knowing exactly where you stand. No anxiety. No end-month surprises. Just quiet confidence.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">⏱️</div>
+          <h3>Time back</h3>
+          <p>Stop spending Sundays reconciling receipts. TRAVIS records, categorises, and reports — in seconds.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">💚</div>
+          <h3>Money kept</h3>
+          <p>One-time KES 999. No subscriptions. No hidden fees. Ever. Most users save more in the first month than they spent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOMO / LOSS FRAMING ============ -->
+  <section class="reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">The cost of waiting</div>
+        <h2>Every day without clarity has a price.</h2>
+        <p>You just don't see it on a receipt.</p>
+      </div>
+
+      <div class="loss-block">
+
+        <div class="loss-row">
+          <div class="mark">⚠️</div>
+          <div class="body">
+            <span class="tag">Money lost</span>
+            <h4>You're overspending in ways you can't see yet.</h4>
+            <p>
+              Most Kenyans discover KES 3,000–8,000 per month going to forgotten
+              subscriptions, impulse buys, and duplicate spending — money that
+              could have been saved.
+            </p>
+          </div>
+        </div>
+
+        <div class="loss-row">
+          <div class="mark">⚠️</div>
+          <div class="body">
+            <span class="tag">Opportunity lost</span>
+            <h4>You're making big decisions blind.</h4>
+            <p>
+              Whether to hire, expand, take a loan, or restock — without data,
+              every big decision is a gamble. TRAVIS removes the gamble.
+            </p>
+          </div>
+        </div>
+
+        <div class="loss-row">
+          <div class="mark">⚠️</div>
+          <div class="body">
+            <span class="tag">Peace lost</span>
+            <h4>You're carrying financial stress you don't have to.</h4>
+            <p>
+              The tension at month-end. The dread of opening M-Pesa.
+              The quiet fear you're behind. That stress has a real cost —
+              and it's not one you have to keep paying.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="alt">
+    <div class="container">
+      <div class="final-cta reveal">
+        <h2>Your money is moving right now.<br />With or without direction.</h2>
+        <p class="quote">
+          You can let it keep moving the way it has — or you can see it,
+          shape it, and finally get ahead. TRAVIS is one click away.
+        </p>
+        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+          <a href="https://travis-three.vercel.app/travis_core.html"
+             class="btn btn-primary">
+            Open TRAVIS →
+          </a>
+          <a href="index.html" class="btn btn-ghost">
+            Learn more first
+          </a>
+        </div>
+        <div class="micro">
+          100% offline · One-time KES 999 · No monthly fees. Ever.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="landing-footer">
+    <div class="container">
+      <div class="foot-brand">
+        <span class="brand-mark">TG</span>
+        <span>Travis Guardian</span>
+      </div>
+      <div>Financial intelligence for every Kenyan.</div>
+      <div class="links">
+        <a href="index.html">Company</a>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="security.html">Security</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div style="margin-top:18px; font-size:12.5px; color:var(--text-muted);">
+        © 2025 Travis Guardian · Made in Kenya 🇰🇪
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
 </body>
 </html>
