@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Security &amp; Privacy — Travis Guardian</title>
+  <meta name="description" content="TRAVIS is built offline-first and privacy-first. Your data never leaves your device. No cloud, no bank login, no third-party sharing. Learn how Travis Guardian protects your financial data." />
+  <meta name="keywords" content="TRAVIS security, offline finance app privacy, Kenya data protection, local data storage finance, Travis Guardian privacy, device fingerprint Kenya fintech" />
+  <meta name="author" content="Travis Guardian" />
+  <meta name="theme-color" content="#0B1F3A" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Security &amp; Privacy — Travis Guardian" />
+  <meta property="og:description" content="Your data never leaves your device. Offline-first. Privacy-first. Built for life." />
+  <meta property="og:url" content="https://travisguardian.org/security.html" />
+  <meta property="og:image" content="https://travisguardian.org/assets/img/og-cover.png" />
+  <meta property="og:site_name" content="Travis Guardian" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Security &amp; Privacy — Travis Guardian" />
+  <meta name="twitter:description" content="Your data never leaves your device. Offline-first. Privacy-first." />
+
+  <link rel="icon" href="/assets/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/img/travis_192.png" />
+
+  <!-- Structured Data: WebPage about Data Protection -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Security & Privacy — Travis Guardian",
+    "url": "https://travisguardian.org/security.html",
+    "description": "TRAVIS is built offline-first and privacy-first. Your data never leaves your device.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Travis Guardian",
+      "url": "https://travisguardian.org"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Data Protection and Privacy in Financial Software"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --navy: #0B1F3A;
+      --navy-soft: #13294B;
+      --teal: #0FB5A6;
+      --green: #1FA971;
+      --gold: #F2B705;
+      --bg: #FFFFFF;
+      --bg-alt: #F6F8FB;
+      --text: #0F172A;
+      --text-muted: #5A6B85;
+      --border: #E4E9F0;
+      --radius: 14px;
+      --shadow-sm: 0 1px 2px rgba(15,23,42,.06);
+      --shadow-md: 0 8px 24px rgba(15,23,42,.08);
+      --shadow-lg: 0 20px 48px rgba(15,23,42,.12);
+      --max: 1180px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header.site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 800; letter-spacing: -.02em; font-size: 18px; color: var(--navy);
+    }
+    .brand-mark {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--teal), var(--green));
+      display: grid; place-items: center;
+      color: #fff; font-weight: 800; font-size: 15px;
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { font-size: 14.5px; font-weight: 500; color: var(--text-muted); transition: color .15s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-cta {
+      background: var(--navy); color: #fff !important;
+      padding: 9px 18px; border-radius: 10px;
+      font-weight: 600 !important; font-size: 14px !important;
+    }
+    .nav-cta:hover { background: var(--navy-soft); }
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--navy); }
+    @media (max-width: 820px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 68px; left: 0; right: 0;
+        background: #fff; padding: 20px 24px;
+        border-bottom: 1px solid var(--border); gap: 16px;
+      }
+    }
+
+    /* Page hero */
+    .page-hero {
+      padding: 88px 0 56px;
+      background: radial-gradient(1000px 400px at 80% -10%, rgba(15,181,166,.10), transparent 60%),
+                  linear-gradient(180deg, #FFFFFF 0%, #F6F8FB 100%);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .page-hero .kicker {
+      font-size: 13px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 14px;
+    }
+    .page-hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      letter-spacing: -.03em; font-weight: 800; color: var(--navy);
+      margin-bottom: 18px; line-height: 1.08;
+    }
+    .page-hero p {
+      font-size: 18px; color: var(--text-muted);
+      max-width: 680px; margin: 0 auto;
+    }
+    .hero-shield {
+      width: 88px; height: 88px;
+      margin: 0 auto 24px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--teal), var(--green));
+      display: grid; place-items: center;
+      font-size: 42px; color: #fff;
+      box-shadow: 0 16px 40px rgba(15,181,166,.35);
+    }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    section.alt { background: var(--bg-alt); }
+
+    .section-head { text-align: center; max-width: 720px; margin: 0 auto 52px; }
+    .section-head .kicker {
+      font-size: 13px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
+    }
+    .section-head h2 {
+      font-size: clamp(26px, 3.4vw, 38px);
+      letter-spacing: -.02em; font-weight: 800;
+      color: var(--navy); margin-bottom: 14px;
+    }
+    .section-head p { color: var(--text-muted); font-size: 17px; }
+
+    /* Promise grid */
+    .grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .card .icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      display: grid; place-items: center; font-size: 20px;
+      background: rgba(15,181,166,.10); color: var(--teal);
+      margin-bottom: 16px;
+    }
+    .card h3 { font-size: 17px; color: var(--navy); margin-bottom: 8px; letter-spacing: -.01em; }
+    .card p { color: var(--text-muted); font-size: 15px; }
+
+    /* Big promise block */
+    .big-promise {
+      background: linear-gradient(135deg, var(--navy) 0%, #13355F 100%);
+      color: #fff;
+      border-radius: 22px;
+      padding: 56px 44px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .big-promise .quote {
+      font-size: clamp(22px, 3.4vw, 30px);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .big-promise .quote .accent { color: var(--teal); }
+    .big-promise p {
+      color: rgba(255,255,255,.78);
+      font-size: 16.5px;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    /* Architecture diagram */
+    .arch {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 44px 36px;
+      box-shadow: var(--shadow-md);
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .arch-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+    .arch-row:last-child { margin-bottom: 0; }
+    @media (max-width: 700px) {
+      .arch-row { grid-template-columns: 1fr; text-align: center; }
+    }
+
+    .arch-box {
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 20px;
+      text-align: center;
+      background: #FAFBFC;
+    }
+    .arch-box.primary {
+      background: linear-gradient(160deg, #E8F5F2, #D6EEE9);
+      border-color: var(--teal);
+    }
+    .arch-box.ghost {
+      background: #FFF8E5;
+      border-color: #F5D97A;
+      border-style: dashed;
+    }
+    .arch-box .icon { font-size: 26px; margin-bottom: 8px; }
+    .arch-box h4 { color: var(--navy); font-size: 15px; margin-bottom: 4px; }
+    .arch-box p { color: var(--text-muted); font-size: 13px; }
+
+    .arch-arrow {
+      font-size: 24px;
+      color: var(--teal);
+      text-align: center;
+      font-weight: 800;
+    }
+    .arch-arrow.blocked {
+      color: #C2410C;
+    }
+
+    /* Fingerprint / activation explainer */
+    .explainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    @media (max-width: 900px) { .explainer { grid-template-columns: 1fr; gap: 32px; } }
+
+    .explainer h2 {
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: -.02em;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .explainer p { color: var(--text-muted); font-size: 16.5px; margin-bottom: 16px; }
+    .explainer ul { list-style: none; }
+    .explainer ul li {
+      display: flex; gap: 10px; align-items: flex-start;
+      padding: 8px 0; color: var(--text); font-size: 15.5px;
+    }
+    .explainer ul li::before { content: "✓"; color: var(--green); font-weight: 800; }
+
+    .explainer-visual {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-md);
+    }
+    .explainer-visual .fp-row {
+      display: flex; justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--border);
+      font-size: 14px;
+    }
+    .explainer-visual .fp-row:last-child { border-bottom: none; }
+    .explainer-visual .fp-row .k { color: var(--text-muted); }
+    .explainer-visual .fp-row .v { font-weight: 700; color: var(--navy); font-family: monospace; font-size: 13px; }
+    .explainer-visual .fp-row .v.green { color: var(--green); }
+    .explainer-visual .fp-header {
+      font-size: 12px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Data protection table */
+    .table-wrap {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      min-width: 600px;
+    }
+    th, td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    thead th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:nth-child(even) { background: #FAFBFC; }
+    td.yes { color: var(--green); font-weight: 700; }
+    td.no { color: #C2410C; font-weight: 600; }
+
+    /* CTA banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #13355F 100%);
+      color: #fff; border-radius: 22px;
+      padding: 56px 40px; text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .cta-banner h2 {
+      font-size: clamp(26px, 3.4vw, 38px);
+      letter-spacing: -.02em; margin-bottom: 14px;
+    }
+    .cta-banner p { color: rgba(255,255,255,.78); font-size: 17px; max-width: 620px; margin: 0 auto 28px; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 22px; border-radius: 12px;
+      font-weight: 600; font-size: 15px;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      cursor: pointer; border: none;
+    }
+    .btn-primary { background: var(--teal); color: #fff; }
+    .btn-primary:hover { transform: translateY(-1px); background: #0DA394; }
+    .btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }
+    .btn-ghost:hover { background: rgba(255,255,255,.08); }
+
+    /* Footer */
+    footer.site-footer {
+      background: #071528; color: rgba(255,255,255,.7);
+      padding: 64px 0 28px; font-size: 14.5px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 48px;
+    }
+    @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand {
+      color: #fff; font-weight: 800; font-size: 17px;
+      margin-bottom: 12px; display: flex; align-items: center; gap: 10px;
+    }
+    .footer-brand .brand-mark { width: 28px; height: 28px; font-size: 13px; }
+    .footer-col h4 {
+      color: #fff; font-size: 13px; letter-spacing: .08em;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block; padding: 5px 0;
+      color: rgba(255,255,255,.65); transition: color .15s ease;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.10);
+      padding-top: 24px; display: flex;
+      justify-content: space-between; flex-wrap: wrap; gap: 12px;
+      font-size: 13px; color: rgba(255,255,255,.5);
+    }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <span class="brand-mark">TG</span>
+        <span>Travis Guardian</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="/about.html">About</a>
+        <a href="/product.html">Product</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/security.html" class="active">Security</a>
+        <a href="/contact.html">Contact</a>
+        <a href="https://travis-three.vercel.app" class="nav-cta" target="_blank" rel="noopener">Launch TRAVIS →</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-shield">🔒</div>
+      <div class="kicker">Security &amp; Privacy</div>
+      <h1>Your data never leaves your device.</h1>
+      <p>
+        TRAVIS is built offline-first. No cloud. No bank login. No third-party sharing.
+        Your financial life stays on your phone — where it belongs.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= BIG PROMISE ================= -->
+  <section class="reveal">
+    <div class="container">
+      <div class="big-promise">
+        <div class="quote">
+          "We can't lose, leak, or sell what <span class="accent">we never have</span>."
+        </div>
+        <p>
+          Because TRAVIS runs entirely on your device, Travis Guardian holds no copy of your
+          financial data. Not on a server, not in a cloud, not anywhere. You own 100% of it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROMISES GRID ================= -->
+  <section class="alt reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Our Promises</div>
+        <h2>What privacy means at Travis Guardian.</h2>
+        <p>Five commitments we build by, and will never break.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon">📵</div>
+          <h3>Offline by default</h3>
+          <p>TRAVIS doesn't need an internet connection — for anything. Your finances work at home, upcountry, or abroad — anywhere.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔒</div>
+          <h3>Local data only</h3>
+          <p>Every transaction, budget, and report lives on your device. We never transmit, copy, or back up your data to any server we control.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🏦</div>
+          <h3>No bank login</h3>
+          <p>We never ask for your bank credentials, M-Pesa PIN, or account passwords. You record transactions yourself — we never see your accounts.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🚫</div>
+          <h3>No third-party sharing</h3>
+          <p>We don't sell, rent, or share your data with advertisers, data brokers, or anyone else. There is nothing to share — it's not ours to share.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🙅</div>
+          <h3>No account needed</h3>
+          <p>You don't create a TRAVIS account with an email or password. Your device is the account — and you control it completely.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🗑️</div>
+          <h3>Delete means delete</h3>
+          <p>If you uninstall TRAVIS or clear its data, it's gone. No hidden copies, no lingering records, no "just in case" backups.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ARCHITECTURE ================= -->
+  <section class="reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">How It Works</div>
+        <h2>The architecture that keeps you safe.</h2>
+        <p>Unlike cloud apps, TRAVIS has no server in the middle of your finances.</p>
+      </div>
+
+      <div class="arch">
+        <div class="arch-row">
+          <div class="arch-box primary">
+            <div class="icon">📱</div>
+            <h4>Your Device</h4>
+            <p>TRAVIS app + your data</p>
+          </div>
+          <div class="arch-arrow blocked">✕</div>
+          <div class="arch-box ghost">
+            <div class="icon">☁️</div>
+            <h4>Travis Guardian Servers</h4>
+            <p>We hold no financial data</p>
+          </div>
+        </div>
+
+        <div class="arch-row">
+          <div class="arch-box primary">
+            <div class="icon">💾</div>
+            <h4>Local Storage</h4>
+            <p>Encrypted, on-device database</p>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-box primary">
+            <div class="icon">📊</div>
+            <h4>Your Reports &amp; Advice</h4>
+            <p>Generated on your device</p>
+          </div>
+        </div>
+
+        <div class="arch-row">
+          <div class="arch-box primary">
+            <div class="icon">🧠</div>
+            <h4>AI Advisory Engine</h4>
+            <p>Runs locally, no API calls</p>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-box primary">
+            <div class="icon">🔮</div>
+            <h4>Prediction Engine</h4>
+            <p>Analyzes your data on-device</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACTIVATION / FINGERPRINT ================= -->
+  <section class="alt reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Activation</div>
+        <h2>Why TRAVIS uses device activation.</h2>
+        <p>A one-time, privacy-respecting way to license your copy of TRAVIS.</p>
+      </div>
+
+      <div class="explainer">
+        <div>
+          <h2>Your device, your license.</h2>
+          <p>
+            When you first install TRAVIS, the app generates a <strong>device fingerprint</strong> — a
+            one-way hash that identifies your installation. This hash is sent to our server
+            <strong>only once</strong>, at activation, so an administrator can issue your activation code.
+          </p>
+          <p>
+            After activation, TRAVIS works entirely offline. No further communication with our
+            servers is needed — ever.
+          </p>
+          <ul>
+            <li>No personal data is included in the fingerprint</li>
+            <li>No financial data is ever transmitted</li>
+            <li>Fingerprint is a one-way hash — it cannot be reversed</li>
+            <li>Used only to issue and validate your license</li>
+            <li>After activation, TRAVIS is fully offline</li>
+          </ul>
+        </div>
+
+        <div class="explainer-visual">
+          <div class="fp-header">Device Activation Record</div>
+          <div class="fp-row"><span class="k">Fingerprint</span><span class="v">a3f9…8c21</span></div>
+          <div class="fp-row"><span class="k">Type</span><span class="v">One-way hash</span></div>
+          <div class="fp-row"><span class="k">Personal data</span><span class="v green">None</span></div>
+          <div class="fp-row"><span class="k">Financial data</span><span class="v green">None</span></div>
+          <div class="fp-row"><span class="k">Transmitted</span><span class="v">Once (at activation)</span></div>
+          <div class="fp-row"><span class="k">After activation</span><span class="v green">Offline forever</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DATA PROTECTION TABLE ================= -->
+  <section class="reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Data Protection</div>
+        <h2>How we compare to cloud-first apps.</h2>
+        <p>The full picture — what we collect vs what they collect.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Data Practice</th>
+              <th>TRAVIS</th>
+              <th>Typical Cloud Finance App</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Stores financial data on your device</td><td class="yes">✔ Yes (only)</td><td class="no">✘ On their servers</td></tr>
+            <tr><td>Requires internet for core features</td><td class="yes">✔ No</td><td class="no">✘ Yes</td></tr>
+            <tr><td>Requires bank login or M-Pesa PIN</td><td class="yes">✔ No</td><td class="no">✘ Often yes</td></tr>
+            <tr><td>Sells or shares data with third parties</td><td class="yes">✔ Never</td><td class="no">✘ Sometimes</td></tr>
+            <tr><td>Account (email/password) required</td><td class="yes">✔ No</td><td class="no">✘ Yes</td></tr>
+            <tr><td>Data deleted when you uninstall</td><td class="yes">✔ Yes</td><td class="no">✘ Often retained</td></tr>
+            <tr><td>Fingerprint sent to server</td><td class="yes">✔ Once (activation)</td><td class="no">✘ Continuous telemetry</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="alt">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2>Privacy isn't a feature. It's the foundation.</h2>
+        <p>
+          Try TRAVIS now. Your data stays on your device — where it belongs.
+          No signup, no internet, no compromises.
+        </p>
+        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+          <a href="https://travis-three.vercel.app" class="btn btn-primary" target="_blank" rel="noopener">Launch TRAVIS App →</a>
+          <a href="/product.html" class="btn btn-ghost">Explore the Product</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><span class="brand-mark">TG</span> Travis Guardian</div>
+          <p style="color:rgba(255,255,255,.6); max-width:280px;">
+            Financial intelligence for every Kenyan. Offline-first. Privacy-first. Built for life.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/team.html">Team</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="/product.html">TRAVIS App</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/security.html">Security</a>
+          <a href="https://travis-three.vercel.app" target="_blank" rel="noopener">Launch App →</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/legal/privacy.html">Privacy</a>
+          <a href="/legal/terms.html">Terms</a>
+          <a href="/legal/refund.html">Refunds</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Travis Guardian. All rights reserved.</span>
+        <span>Made in Kenya 🇰🇪</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const links = document.getElementById('navLinks');
+    toggle?.addEventListener('click', () => links.classList.toggle('open'));
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
