@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy — Travis Guardian</title>
+  <meta name="description" content="Travis Guardian Privacy Policy. TRAVIS runs fully offline — your financial data never leaves your device. Read how we protect your privacy." />
+  <meta name="author" content="Travis Guardian" />
+  <meta name="theme-color" content="#0B1F3A" />
+  <link rel="icon" href="assets/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/img/travis_192.png" />
+
+  <style>
+    :root {
+      --navy: #0B1F3A; --navy-soft: #13294B; --teal: #0FB5A6;
+      --green: #1FA971; --gold: #F2B705;
+      --bg: #FFFFFF; --bg-alt: #F6F8FB;
+      --text: #0F172A; --text-muted: #5A6B85; --border: #E4E9F0;
+      --radius: 14px;
+      --shadow-sm: 0 1px 2px rgba(15,23,42,.06);
+      --shadow-md: 0 8px 24px rgba(15,23,42,.08);
+      --max: 1180px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font); color: var(--text); background: var(--bg);
+      line-height: 1.65; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    header.site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -.02em; font-size: 18px; color: var(--navy); }
+    .brand-mark {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--teal), var(--green));
+      display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 15px;
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { font-size: 14.5px; font-weight: 500; color: var(--text-muted); transition: color .15s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-cta {
+      background: var(--navy); color: #fff !important;
+      padding: 9px 18px; border-radius: 10px;
+      font-weight: 600 !important; font-size: 14px !important;
+    }
+    .nav-cta:hover { background: var(--navy-soft); }
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--navy); }
+    @media (max-width: 820px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 68px; left: 0; right: 0;
+        background: #fff; padding: 20px 24px;
+        border-bottom: 1px solid var(--border); gap: 16px;
+      }
+    }
+
+    .page-hero {
+      padding: 72px 0 44px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F6F8FB 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero .kicker {
+      font-size: 13px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 14px;
+    }
+    .page-hero h1 {
+      font-size: clamp(30px, 4.4vw, 46px);
+      letter-spacing: -.03em; font-weight: 800; color: var(--navy);
+      margin-bottom: 14px; line-height: 1.08;
+    }
+    .page-hero .meta {
+      font-size: 14px; color: var(--text-muted);
+    }
+
+    .legal { padding: 56px 0 80px; }
+    .legal-layout {
+      display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: start;
+    }
+    @media (max-width: 900px) {
+      .legal-layout { grid-template-columns: 1fr; gap: 32px; }
+      .legal-toc { position: static !important; }
+    }
+
+    .legal-toc {
+      position: sticky; top: 88px;
+      background: #fff; border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px;
+      box-shadow: var(--shadow-sm);
+    }
+    .legal-toc h4 {
+      font-size: 12px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px;
+    }
+    .legal-toc a {
+      display: block; padding: 7px 0; font-size: 14px;
+      color: var(--text-muted); border-bottom: 1px dashed var(--border);
+    }
+    .legal-toc a:last-child { border-bottom: none; }
+    .legal-toc a:hover { color: var(--teal); }
+
+    .legal-content h2 {
+      font-size: 22px; color: var(--navy); letter-spacing: -.01em;
+      margin: 40px 0 14px; padding-top: 8px;
+    }
+    .legal-content h2:first-child { margin-top: 0; }
+    .legal-content h3 {
+      font-size: 17px; color: var(--navy); margin: 24px 0 8px;
+    }
+    .legal-content p { color: var(--text); font-size: 15.5px; margin-bottom: 14px; }
+    .legal-content ul, .legal-content ol { margin: 0 0 16px 22px; }
+    .legal-content li { color: var(--text); font-size: 15.5px; margin-bottom: 6px; }
+    .legal-content strong { color: var(--navy); }
+
+    .callout {
+      background: linear-gradient(135deg, #E8F5F2, #D6EEE9);
+      border-left: 4px solid var(--teal);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin: 22px 0;
+    }
+    .callout p { margin-bottom: 0; color: var(--navy); font-size: 15px; }
+
+    .legal-content a.inline {
+      color: var(--teal); font-weight: 600;
+    }
+    .legal-content a.inline:hover { text-decoration: underline; }
+
+    footer.site-footer {
+      background: #071528; color: rgba(255,255,255,.7);
+      padding: 64px 0 28px; font-size: 14.5px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 48px;
+    }
+    @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand { color: #fff; font-weight: 800; font-size: 17px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .footer-brand .brand-mark { width: 28px; height: 28px; font-size: 13px; }
+    .footer-col h4 { color: #fff; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-col a { display: block; padding: 5px 0; color: rgba(255,255,255,.65); transition: color .15s ease; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.10);
+      padding-top: 24px; display: flex; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px; font-size: 13px; color: rgba(255,255,255,.5);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">TG</span>
+        <span>Travis Guardian</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="about.html">About</a>
+        <a href="product.html">Product</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="security.html">Security</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://travis-three.vercel.app" class="nav-cta" target="_blank" rel="noopener">Launch TRAVIS →</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="kicker">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: 24 September 2026 · Effective immediately</p>
+    </div>
+  </section>
+
+  <section class="legal">
+    <div class="container legal-layout">
+
+      <aside class="legal-toc">
+        <h4>Contents</h4>
+        <a href="#overview">1. Overview</a>
+        <a href="#data-we-collect">2. Data We Collect</a>
+        <a href="#how-we-use">3. How We Use Data</a>
+        <a href="#storage">4. Data Storage</a>
+        <a href="#sharing">5. Sharing &amp; Disclosure</a>
+        <a href="#rights">6. Your Rights</a>
+        <a href="#children">7. Children's Privacy</a>
+        <a href="#changes">8. Changes to Policy</a>
+        <a href="#contact">9. Contact Us</a>
+      </aside>
+
+      <div class="legal-content">
+
+        <h2 id="overview">1. Overview</h2>
+        <p>
+          Travis Guardian ("we", "us", "our") builds offline-first financial software for Kenya
+          and East Africa. This Privacy Policy explains how we handle information in connection
+          with our website at <strong>travisguardian.org</strong> and our flagship application,
+          <strong>TRAVIS</strong> (together, the "Services").
+        </p>
+
+        <div class="callout">
+          <p>
+            <strong>The short version:</strong> TRAVIS is 100% offline. Your financial data
+            never leaves your device. We do not collect, store, or share your financial data.
+          </p>
+        </div>
+
+        <h2 id="data-we-collect">2. Data We Collect</h2>
+        <p>We collect the absolute minimum required to run our Services:</p>
+
+        <h3>a) Website visitors</h3>
+        <ul>
+          <li><strong>No tracking cookies.</strong> Our company website does not use analytics, advertising, or tracking cookies.</li>
+          <li><strong>Server logs.</strong> Our hosting providers (such as GitHub Pages or Cloudflare) may keep standard access logs (IP address, browser type, timestamp) for security and uptime. We do not access or analyze these logs beyond security incidents.</li>
+        </ul>
+
+        <h3>b) TRAVIS app users</h3>
+        <ul>
+          <li><strong>Financial data.</strong> All transactions, budgets, accounts, and reports you enter are stored <strong>locally on your device only</strong>. We cannot see them, and they are never transmitted to us.</li>
+          <li><strong>Device fingerprint (activation only).</strong> When you first install TRAVIS, the app generates a one-way cryptographic hash of your device. This hash is sent <strong>once</strong>, at activation, so we can issue your activation code. It contains no personal or financial data and cannot be reversed.</li>
+          <li><strong>No account required.</strong> We do not ask for your name, email, phone number, or bank login to use TRAVIS.</li>
+        </ul>
+
+        <h3>c) Communication</h3>
+        <p>
+          If you contact us via email (support@, sales@, careers@, or hello@), we receive your
+          email address and the contents of your message. We use this only to reply to you.
+        </p>
+
+        <h2 id="how-we-use">3. How We Use Data</h2>
+        <p>We use the limited data we collect only for:</p>
+        <ul>
+          <li>Issuing and validating TRAVIS activation codes</li>
+          <li>Responding to your support, sales, or career inquiries</li>
+          <li>Protecting against abuse, fraud, or unauthorized distribution of TRAVIS</li>
+          <li>Complying with legal obligations under Kenyan law</li>
+        </ul>
+        <p>
+          We do <strong>not</strong> use your data for advertising, profiling, automated decision-making,
+          or sale to third parties.
+        </p>
+
+        <h2 id="storage">4. Data Storage</h2>
+        <p>
+          TRAVIS stores all user data in an encrypted local database on your device. If you
+          uninstall TRAVIS or clear its data, that data is permanently deleted — there is no
+          hidden backup on our side.
+        </p>
+        <p>
+          Activation records (the one-way device hash and its activation status) may be retained
+          on our server so we can validate licenses. These records contain no personal or
+          financial information.
+        </p>
+
+        <h2 id="sharing">5. Sharing &amp; Disclosure</h2>
+        <p>We do not sell, rent, or trade your data. We disclose information only:</p>
+        <ul>
+          <li>When required by a valid legal order under Kenyan law</li>
+          <li>To protect the rights, safety, or property of Travis Guardian, our users, or the public</li>
+          <li>To service providers who help us operate (for example, email hosting) under strict confidentiality</li>
+        </ul>
+
+        <h2 id="rights">6. Your Rights</h2>
+        <p>
+          Under the <strong>Kenya Data Protection Act, 2019</strong>, you have the right to:
+        </p>
+        <ul>
+          <li>Access the personal data we hold about you (limited to communication records)</li>
+          <li>Request correction or deletion of that data</li>
+          <li>Object to processing</li>
+          <li>Lodge a complaint with the Office of the Data Protection Commissioner (ODPC)</li>
+        </ul>
+        <p>
+          Because your financial data lives only on your device, you already control it directly.
+          To exercise rights over communication data, email us at
+          <a href="mailto:privacy@travisguardian.org" class="inline">privacy@travisguardian.org</a>.
+        </p>
+
+        <h2 id="children">7. Children's Privacy</h2>
+        <p>
+          TRAVIS is not directed at children under 18. We do not knowingly collect personal
+          information from children. If you believe a child has provided us information, contact
+          us and we will delete it.
+        </p>
+
+        <h2 id="changes">8. Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time. When we do, we will update the
+          "Last updated" date at the top. Material changes will be announced on our website.
+        </p>
+
+        <h2 id="contact">9. Contact Us</h2>
+        <p>For privacy questions or requests:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:privacy@travisguardian.org" class="inline">privacy@travisguardian.org</a></li>
+          <li><strong>General:</strong> <a href="mailto:hello@travisguardian.org" class="inline">hello@travisguardian.org</a></li>
+          <li><strong>Location:</strong> Nairobi, Kenya 🇰🇪</li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><span class="brand-mark">TG</span> Travis Guardian</div>
+          <p style="color:rgba(255,255,255,.6); max-width:280px;">
+            Financial intelligence for every Kenyan. Offline-first. Privacy-first. Built for life.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="team.html">Team</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="product.html">TRAVIS App</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="security.html">Security</a>
+          <a href="https://travis-three.vercel.app" target="_blank" rel="noopener">Launch App →</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="refund.html">Refunds</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Travis Guardian. All rights reserved.</span>
+        <span>Made in Kenya 🇰🇪</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const links = document.getElementById('navLinks');
+    toggle?.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+</body>
+</html>
