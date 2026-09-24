@@ -1,25 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head><meta charset="UTF-8"><title>Link test</title></head>
 <body>
-
-  
-  <a href="https://travis-three.vercel.app/travis_core.html" target="_top">Test link</a>
-  <!-- A: new tab, referrer sent -->
-<a href="https://travis-three.vercel.app" target="_blank">A: new tab</a><br>
-
-<!-- B: new tab, no referrer -->
-<a href="https://travis-three.vercel.app" target="_blank" rel="noreferrer">B: new tab, no referrer</a><br>
-
-<!-- C: same tab, leaves your site entirely -->
-<a href="https://travis-three.vercel.app">C: same tab</a><br>
-
-<!-- D: script-opened tab -->
-<button onclick="window.open('https://travis-three.vercel.app', '_blank')">D: window.open</button><br>
-
-<!-- E: redirect through your own server (make /go/travis a 302 to the app) -->
-<a href="travis.html" target="_blank">E: via your redirect</a>
-
-
-  
+  <a href="travis.html" target="_blank">E: redirect page, new tab</a><br>
+  <a href="travis.html">E2: redirect page, same tab</a>
 </body>
 </html>
