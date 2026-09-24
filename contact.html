@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact — Travis Guardian</title>
+  <meta name="description" content="Get in touch with Travis Guardian. Support, sales, careers, partnerships, and TRAVIS activation requests. Based in Nairobi, Kenya. We respond within 24 hours." />
+  <meta name="keywords" content="contact Travis Guardian, TRAVIS support, Kenya fintech contact, TRAVIS activation code, Travis Guardian sales" />
+  <meta name="author" content="Travis Guardian" />
+  <meta name="theme-color" content="#0B1F3A" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact — Travis Guardian" />
+  <meta property="og:description" content="Get in touch with Travis Guardian. Support, sales, careers, and TRAVIS activation." />
+  <meta property="og:url" content="https://travisguardian.org/contact.html" />
+  <meta property="og:image" content="https://travisguardian.org/assets/img/og-cover.png" />
+  <meta property="og:site_name" content="Travis Guardian" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — Travis Guardian" />
+  <meta name="twitter:description" content="Get in touch with Travis Guardian." />
+
+  <link rel="icon" href="/assets/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/img/travis_192.png" />
+
+  <!-- Structured Data: ContactPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Travis Guardian",
+    "url": "https://travisguardian.org/contact.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Travis Guardian",
+      "url": "https://travisguardian.org",
+      "email": "hello@travisguardian.org",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@travisguardian.org",
+          "areaServed": "KE",
+          "availableLanguage": ["English", "Swahili"]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "sales@travisguardian.org",
+          "areaServed": "KE"
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "careers",
+          "email": "careers@travisguardian.org",
+          "areaServed": "KE"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nairobi",
+        "addressCountry": "KE"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --navy: #0B1F3A;
+      --navy-soft: #13294B;
+      --teal: #0FB5A6;
+      --green: #1FA971;
+      --gold: #F2B705;
+      --bg: #FFFFFF;
+      --bg-alt: #F6F8FB;
+      --text: #0F172A;
+      --text-muted: #5A6B85;
+      --border: #E4E9F0;
+      --radius: 14px;
+      --shadow-sm: 0 1px 2px rgba(15,23,42,.06);
+      --shadow-md: 0 8px 24px rgba(15,23,42,.08);
+      --shadow-lg: 0 20px 48px rgba(15,23,42,.12);
+      --max: 1180px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header.site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 800; letter-spacing: -.02em; font-size: 18px; color: var(--navy);
+    }
+    .brand-mark {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--teal), var(--green));
+      display: grid; place-items: center;
+      color: #fff; font-weight: 800; font-size: 15px;
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { font-size: 14.5px; font-weight: 500; color: var(--text-muted); transition: color .15s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-cta {
+      background: var(--navy); color: #fff !important;
+      padding: 9px 18px; border-radius: 10px;
+      font-weight: 600 !important; font-size: 14px !important;
+    }
+    .nav-cta:hover { background: var(--navy-soft); }
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--navy); }
+    @media (max-width: 820px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 68px; left: 0; right: 0;
+        background: #fff; padding: 20px 24px;
+        border-bottom: 1px solid var(--border); gap: 16px;
+      }
+    }
+
+    /* Page hero */
+    .page-hero {
+      padding: 88px 0 56px;
+      background: radial-gradient(1000px 400px at 80% -10%, rgba(15,181,166,.10), transparent 60%),
+                  linear-gradient(180deg, #FFFFFF 0%, #F6F8FB 100%);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .page-hero .kicker {
+      font-size: 13px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 14px;
+    }
+    .page-hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      letter-spacing: -.03em; font-weight: 800; color: var(--navy);
+      margin-bottom: 18px; line-height: 1.08;
+    }
+    .page-hero p {
+      font-size: 18px; color: var(--text-muted);
+      max-width: 680px; margin: 0 auto;
+    }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    section.alt { background: var(--bg-alt); }
+
+    .section-head { text-align: center; max-width: 720px; margin: 0 auto 52px; }
+    .section-head .kicker {
+      font-size: 13px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
+    }
+    .section-head h2 {
+      font-size: clamp(26px, 3.4vw, 38px);
+      letter-spacing: -.02em; font-weight: 800;
+      color: var(--navy); margin-bottom: 14px;
+    }
+    .section-head p { color: var(--text-muted); font-size: 17px; }
+
+    /* Contact method cards */
+    .grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
+
+    .method-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px 26px;
+      box-shadow: var(--shadow-sm);
+      transition: transform .18s ease, box-shadow .18s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .method-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .method-card .icon {
+      width: 46px; height: 46px; border-radius: 12px;
+      display: grid; place-items: center; font-size: 22px;
+      background: rgba(15,181,166,.10); color: var(--teal);
+      margin-bottom: 18px;
+    }
+    .method-card h3 { font-size: 18px; color: var(--navy); margin-bottom: 6px; letter-spacing: -.01em; }
+    .method-card .role {
+      font-size: 12.5px; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: 12px;
+    }
+    .method-card p { color: var(--text-muted); font-size: 14.5px; margin-bottom: 18px; flex-grow: 1; }
+    .method-card .email {
+      font-size: 15px; font-weight: 700; color: var(--navy);
+      word-break: break-all;
+    }
+    .method-card .email:hover { color: var(--teal); }
+
+    /* Form + Info split */
+    .split {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 48px;
+      align-items: flex-start;
+    }
+    @media (max-width: 900px) { .split { grid-template-columns: 1fr; gap: 40px; } }
+
+    /* Form */
+    .form-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-md);
+    }
+    .form-card h2 {
+      font-size: 24px;
+      color: var(--navy);
+      letter-spacing: -.01em;
+      margin-bottom: 8px;
+    }
+    .form-card > p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 26px;
+    }
+
+    .form-row { margin-bottom: 18px; }
+    .form-row label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--text);
+      background: #fff;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    .form-row input:focus,
+    .form-row select:focus,
+    .form-row textarea:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(15,181,166,.14);
+    }
+    .form-row textarea { resize: vertical; min-height: 120px; }
+
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 500px) { .form-grid-2 { grid-template-columns: 1fr; } }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 22px; border-radius: 12px;
+      font-weight: 600; font-size: 15px;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      cursor: pointer; border: none;
+    }
+    .btn-primary { background: var(--navy); color: #fff; box-shadow: var(--shadow-md); width: 100%; justify-content: center; }
+    .btn-primary:hover { transform: translateY(-1px); background: var(--navy-soft); }
+    .btn-teal { background: var(--teal); color: #fff; }
+    .btn-teal:hover { transform: translateY(-1px); background: #0DA394; }
+    .btn-ghost { background: #fff; color: var(--navy); border: 1px solid var(--border); }
+    .btn-ghost:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+
+    .form-note {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.5;
+    }
+
+    /* Info column */
+    .info-col h3 {
+      font-size: 20px;
+      color: var(--navy);
+      letter-spacing: -.01em;
+      margin-bottom: 18px;
+    }
+    .info-block {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 22px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 16px;
+    }
+    .info-block h4 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+    .info-block p {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+    .info-block p strong { color: var(--navy); }
+    .info-block .link {
+      color: var(--teal);
+      font-weight: 600;
+    }
+    .info-block .link:hover { text-decoration: underline; }
+
+    .hours-list { list-style: none; }
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 0;
+      border-bottom: 1px dashed var(--border);
+      font-size: 14px;
+    }
+    .hours-list li:last-child { border-bottom: none; }
+    .hours-list .day { color: var(--text-muted); }
+    .hours-list .time { color: var(--navy); font-weight: 700; }
+
+    /* Activation callout */
+    .activation-callout {
+      background: linear-gradient(135deg, var(--navy) 0%, #13355F 100%);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 26px 24px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 16px;
+    }
+    .activation-callout h4 {
+      font-size: 15px;
+      margin-bottom: 8px;
+      color: #fff;
+      letter-spacing: -.01em;
+    }
+    .activation-callout p {
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+      margin-bottom: 14px;
+      line-height: 1.55;
+    }
+    .activation-callout .code {
+      display: inline-block;
+      background: rgba(15,181,166,.15);
+      border: 1px solid rgba(15,181,166,.35);
+      color: var(--teal);
+      font-family: monospace;
+      font-size: 13px;
+      padding: 5px 10px;
+      border-radius: 6px;
+    }
+
+    /* Social row */
+    .socials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 500px) { .socials { grid-template-columns: repeat(2, 1fr); } }
+
+    .social {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--navy);
+      box-shadow: var(--shadow-sm);
+      transition: transform .15s ease, background .15s ease, color .15s ease;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .social:hover {
+      transform: translateY(-2px);
+      background: var(--navy);
+      color: #fff;
+    }
+
+    /* Map block */
+    .map-block {
+      background: linear-gradient(160deg, #E8F5F2, #D6EEE9);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .map-block .pin { font-size: 48px; margin-bottom: 10px; }
+    .map-block h4 { color: var(--navy); font-size: 18px; margin-bottom: 4px; }
+    .map-block p { color: var(--text-muted); font-size: 14px; }
+
+    /* CTA banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #13355F 100%);
+      color: #fff; border-radius: 22px;
+      padding: 56px 40px; text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .cta-banner h2 {
+      font-size: clamp(26px, 3.4vw, 38px);
+      letter-spacing: -.02em; margin-bottom: 14px;
+    }
+    .cta-banner p { color: rgba(255,255,255,.78); font-size: 17px; max-width: 620px; margin: 0 auto 28px; }
+
+    /* Footer */
+    footer.site-footer {
+      background: #071528; color: rgba(255,255,255,.7);
+      padding: 64px 0 28px; font-size: 14.5px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 48px;
+    }
+    @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand {
+      color: #fff; font-weight: 800; font-size: 17px;
+      margin-bottom: 12px; display: flex; align-items: center; gap: 10px;
+    }
+    .footer-brand .brand-mark { width: 28px; height: 28px; font-size: 13px; }
+    .footer-col h4 {
+      color: #fff; font-size: 13px; letter-spacing: .08em;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block; padding: 5px 0;
+      color: rgba(255,255,255,.65); transition: color .15s ease;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.10);
+      padding-top: 24px; display: flex;
+      justify-content: space-between; flex-wrap: wrap; gap: 12px;
+      font-size: 13px; color: rgba(255,255,255,.5);
+    }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <span class="brand-mark">TG</span>
+        <span>Travis Guardian</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="/about.html">About</a>
+        <a href="/product.html">Product</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/security.html">Security</a>
+        <a href="/contact.html" class="active">Contact</a>
+        <a href="https://travis-three.vercel.app" class="nav-cta" target="_blank" rel="noopener">Launch TRAVIS →</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="kicker">Contact Us</div>
+      <h1>Let's talk.</h1>
+      <p>
+        Support, sales, careers, partnerships, or activation codes — pick the channel
+        that fits and we'll get back to you within 24 hours.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT METHODS ================= -->
+  <section class="reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Reach Us</div>
+        <h2>Direct channels.</h2>
+        <p>Email the team directly, or use the form below for anything else.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="method-card">
+          <div class="icon">🛠️</div>
+          <h3>Support</h3>
+          <div class="role">For TRAVIS users</div>
+          <p>Installation, activation codes, data migration, bugs, or how-to questions.</p>
+          <a href="mailto:support@travisguardian.org" class="email">support@travisguardian.org</a>
+        </div>
+
+        <div class="method-card">
+          <div class="icon">💼</div>
+          <h3>Sales &amp; Bulk</h3>
+          <div class="role">For chamas, SMEs &amp; orgs</div>
+          <p>Bulk licensing, group purchases, invoicing, and partnership inquiries.</p>
+          <a href="mailto:sales@travisguardian.org" class="email">sales@travisguardian.org</a>
+        </div>
+
+        <div class="method-card">
+          <div class="icon">🚀</div>
+          <h3>Careers</h3>
+          <div class="role">For builders</div>
+          <p>Engineering, design, finance, or growth — help us build Travis Guardian.</p>
+          <a href="mailto:careers@travisguardian.org" class="email">careers@travisguardian.org</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FORM + INFO ================= -->
+  <section class="alt">
+    <div class="container split">
+
+      <!-- Contact form -->
+      <div class="form-card reveal">
+        <h2>Send us a message.</h2>
+        <p>Fill in the form and we'll reply within 24 hours. All fields are required.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-grid-2">
+            <div class="form-row">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Grace Mwangi" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-row">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="+254 7XX XXX XXX" />
+            </div>
+            <div class="form-row">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic" required>
+                <option value="">Select a topic…</option>
+                <option value="support">TRAVIS Support</option>
+                <option value="activation">Activation Code Request</option>
+                <option value="sales">Sales / Bulk Purchase</option>
+                <option value="partnership">Partnership</option>
+                <option value="careers">Careers</option>
+                <option value="press">Press / Media</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us how we can help…" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message →</button>
+          <p class="form-note">
+            By sending, you agree to be contacted about your inquiry.<br />
+            We never share your details with third parties.
+          </p>
+        </form>
+      </div>
+
+      <!-- Info column -->
+      <div class="info-col reveal">
+        <h3>Other ways to reach us.</h3>
+
+        <div class="activation-callout">
+          <h4>🔑 Need an activation code?</h4>
+          <p>
+            TRAVIS requires a one-time activation code issued by an administrator.
+            Install the app, capture your device fingerprint, and send it to us with
+            your payment confirmation.
+          </p>
+          <span class="code">Step 1: Install → Step 2: Copy fingerprint → Step 3: Email us</span>
+        </div>
+
+        <div class="info-block">
+          <h4>Support Hours</h4>
+          <ul class="hours-list">
+            <li><span class="day">Monday – Friday</span><span class="time">8:00 AM – 8:00 PM EAT</span></li>
+            <li><span class="day">Saturday</span><span class="time">9:00 AM – 5:00 PM EAT</span></li>
+            <li><span class="day">Sunday &amp; Holidays</span><span class="time">Closed</span></li>
+            <li><span class="day">Email response time</span><span class="time">Within 24 hours</span></li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h4>Head Office</h4>
+          <p>
+            <strong>Travis Guardian</strong><br />
+            Nairobi, Kenya 🇰🇪<br />
+            Building offline-first financial intelligence for East Africa.
+          </p>
+        </div>
+
+        <div class="info-block">
+          <h4>General Enquiries</h4>
+          <p>
+            Not sure who to contact? Email <a href="mailto:hello@travisguardian.org" class="link">hello@travisguardian.org</a>
+            and we'll route your message to the right person.
+          </p>
+        </div>
+
+        <div class="info-block">
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <a href="#" class="social" aria-label="X (Twitter)">𝕏</a>
+            <a href="#" class="social" aria-label="LinkedIn">in</a>
+            <a href="#" class="social" aria-label="GitHub">⌨</a>
+            <a href="#" class="social" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAP ================= -->
+  <section class="reveal">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Find Us</div>
+        <h2>Based in Nairobi. Built for Kenya.</h2>
+        <p>We're a proudly Kenyan company building for the whole of East Africa.</p>
+      </div>
+
+      <div class="map-block">
+        <div class="pin">🇰🇪</div>
+        <h4>Nairobi, Kenya</h4>
+        <p>Travis Guardian HQ — serving all 47 counties and beyond.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="alt">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2>Ready to try TRAVIS?</h2>
+        <p>
+          You don't need to contact us to start. Launch the app now — no signup,
+          no internet, no fees to try.
+        </p>
+        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+          <a href="https://travis-three.vercel.app" class="btn btn-teal" target="_blank" rel="noopener">Launch TRAVIS App →</a>
+          <a href="/pricing.html" class="btn btn-ghost">See Pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><span class="brand-mark">TG</span> Travis Guardian</div>
+          <p style="color:rgba(255,255,255,.6); max-width:280px;">
+            Financial intelligence for every Kenyan. Offline-first. Privacy-first. Built for life.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/team.html">Team</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="/product.html">TRAVIS App</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/security.html">Security</a>
+          <a href="https://travis-three.vercel.app" target="_blank" rel="noopener">Launch App →</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/legal/privacy.html">Privacy</a>
+          <a href="/legal/terms.html">Terms</a>
+          <a href="/legal/refund.html">Refunds</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Travis Guardian. All rights reserved.</span>
+        <span>Made in Kenya 🇰🇪</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const links = document.getElementById('navLinks');
+    toggle?.addEventListener('click', () => links.classList.toggle('open'));
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Contact form — mailto fallback (no backend needed)
+    const form = document.getElementById('contactForm');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = data.get('name') || '';
+      const email = data.get('email') || '';
+      const phone = data.get('phone') || '';
+      const topic = data.get('topic') || '';
+      const message = data.get('message') || '';
+
+      const subject = encodeURIComponent(`[Travis Guardian] ${topic} — ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone}\n` +
+        `Topic: ${topic}\n\n` +
+        `Message:\n${message}`
+      );
+
+      // Route by topic to the right inbox
+      const inbox =
+        topic === 'support' || topic === 'activation' ? 'support@travisguardian.org' :
+        topic === 'sales' || topic === 'partnership' ? 'sales@travisguardian.org' :
+        topic === 'careers' ? 'careers@travisguardian.org' :
+        'hello@travisguardian.org';
+
+      window.location.href = `mailto:${inbox}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
