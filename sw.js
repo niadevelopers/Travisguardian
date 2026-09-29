@@ -20,6 +20,7 @@ const PRECACHE_URLS = [
   './privacy.html',
   './terms.html',
   './refund.html',
+  './theme.js',
   './landing.html',   // if you uploaded the landing page
   './travis.html',    // present in your repo
   './test.html',      // present in your repo
